@@ -13,15 +13,8 @@ import java.awt.GridLayout;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-import javax.swing.JComboBox;
-import javax.swing.DefaultComboBoxModel;
-
-import parking.business.Vehicule;
-
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
 
 public class SearchVehicule extends JDialog
 {

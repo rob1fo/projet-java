@@ -40,6 +40,8 @@ public class PlaceButton extends JButton implements java.util.Observer
 	{
 		g.setColor(c);
 		g.fillRect(0, 0, getWidth(), getHeight());
+		g.setColor(Color.black);
+		g.drawString(String.valueOf(numero), 8, 16);
 	}
 	
 	public Place getPlace()

@@ -6,17 +6,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.GridLayout;
-
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
-import javax.swing.JToolBar;
-import javax.swing.JDesktopPane;
-import javax.swing.JButton;
-import javax.swing.JTextField;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JMenu;
@@ -30,7 +22,6 @@ import parking.exception.PlaceOccupeeException;
 
 import java.awt.FlowLayout;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
