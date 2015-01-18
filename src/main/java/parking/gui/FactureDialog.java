@@ -14,9 +14,24 @@ import parking.business.Facture;
 import parking.business.Vehicule;
 import parking.business.Voiture;
 
+<<<<<<< HEAD:src/main/java/parking/gui/FactureDialog.java
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.print.PrinterException;
+=======
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+
+import parking.business.Vehicule;
+
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+>>>>>>> parent of 218a6c0... Affichage des numéro de places. Imports inutiles enlevés.:src/main/java/parking/gui/SearchVehicule.java
 
 public class FactureDialog extends JDialog
 {
