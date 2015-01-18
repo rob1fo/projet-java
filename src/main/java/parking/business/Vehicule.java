@@ -1,7 +1,13 @@
 package parking.business;
 
-public abstract class Vehicule
+import java.io.Serializable;
+
+/**
+ * Classe abstraite représentant un véhicule
+ */
+public abstract class Vehicule implements Serializable
 {
+	private static final long serialVersionUID = 6908533054919923910L;
 	String immatriculation;
 	String modele;
 	String marque;
@@ -15,6 +21,9 @@ public abstract class Vehicule
 		this.proprietaire = prop;
 	}
 
+	/**
+	 * @return true si le véhicule est de type transporteur
+	 */
 	public abstract boolean isTransporteur();
 
 	public String getImmatriculation()
@@ -35,5 +44,11 @@ public abstract class Vehicule
 	public String getProprietaire()
 	{
 		return proprietaire;
+	}
+	
+	public String toString()
+	{
+		return getClass().getSimpleName() + " immatriculé " + immatriculation + ", appartenant a " + proprietaire + ", de la marque "  + marque
+				+ ", ayant pour modele " + modele;
 	}
 }

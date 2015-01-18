@@ -25,7 +25,7 @@ import java.lang.reflect.InvocationTargetException;
 
 public class AddVehicule extends JDialog
 {
-
+	private static final long serialVersionUID = 1L;
 	private final JPanel contentPanel = new JPanel();
 	private JTextField immaT;
 	private JTextField modelT;
@@ -104,10 +104,11 @@ public class AddVehicule extends JDialog
 			JLabel lblType = new JLabel("Type de véhicule");
 			contentPanel.add(lblType);
 		}
-		final JComboBox comboBox;
+		final JComboBox<String> comboBox;
 		{
-			comboBox = new JComboBox();
-			comboBox.setModel(new DefaultComboBoxModel(new String[] { "Moto",
+			comboBox = new JComboBox<String>();
+
+			comboBox.setModel(new DefaultComboBoxModel<String>(new String[] { "Moto",
 					"Voiture", "Camion" }));
 			contentPanel.add(comboBox);
 		}
@@ -121,10 +122,10 @@ public class AddVehicule extends JDialog
 				{
 					public void actionPerformed(ActionEvent arg0)
 					{
-						if(immaT.getText().length() == 0	||
+						if(immaT .getText().length() == 0	||
 						   modelT.getText().length() == 0	||
-						   marcT.getText().length() == 0	||
-						   propT.getText().length() == 0)
+						   marcT .getText().length() == 0	||
+						   propT .getText().length() == 0)
 						{
 							JOptionPane.showMessageDialog(null, "Touts les champs sont requis", "Erreur", JOptionPane.ERROR_MESSAGE);
 							return;
@@ -144,40 +145,32 @@ public class AddVehicule extends JDialog
 						}
 						catch (InstantiationException e)
 						{
-							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
 						catch (IllegalAccessException e)
 						{
-							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
 						catch (IllegalArgumentException e)
 						{
-							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
 						catch (InvocationTargetException e)
 						{
-							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
-
 						catch (NoSuchMethodException e)
-					{
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-						catch (SecurityException e)
-					{
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-						catch (ClassNotFoundException e)
-					{
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}						
+						{
+							e.printStackTrace();
+						}
+							catch (SecurityException e)
+						{
+							e.printStackTrace();
+						}
+							catch (ClassNotFoundException e)
+						{
+							e.printStackTrace();
+						}						
 					}
 				});
 				okButton.setActionCommand("OK");
